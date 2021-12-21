@@ -13,4 +13,4 @@ jobs:
         uses: HENNGE/action-misspell@v1.9.1.rc
         with:
           exclude: |
-            *.ignore
+            ./doc/openapi/*
