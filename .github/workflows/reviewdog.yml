@@ -14,4 +14,5 @@ jobs:
         with:
           exclude: |
             *.ignore
+            ./.golangci.yml
             ./doc/openapi/*
