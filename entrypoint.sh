@@ -22,6 +22,8 @@ while read -r pattern; do
     [[ -n ${pattern} ]] && excludes+=(-not -path "${pattern}")
 done <<< "${INPUT_EXCLUDE:-}"
 
+echo ${excludes[@]}
+
 find "${paths[@]}" "${excludes[@]}" -type f "${names[@]}" -print0 \
     | xargs -0 misspell -locale="${INPUT_LOCALE}" -i "${INPUT_IGNORE}" \
     | reviewdog -efm="%f:%l:%c: %m" \
