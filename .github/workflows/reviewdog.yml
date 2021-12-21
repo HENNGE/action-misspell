@@ -1,4 +1,5 @@
 name: reviewdog
+
 on: pull_request
 
 jobs:
@@ -9,8 +10,8 @@ jobs:
       - name: Check out code.
         uses: actions/checkout@v2
       - name: misspell
-        uses: reviewdog/action-misspell@v1.9.1.rc
+        uses: HENNGE/action-misspell@v1.9.1.rc
         with:
-          github_token: ${{ secrets.github_token }}
-          locale: "US"
-          pattern: "*.md"
+          exclude: |
+            test1
+            test2
