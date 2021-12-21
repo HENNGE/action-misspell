@@ -13,5 +13,4 @@ jobs:
         uses: HENNGE/action-misspell@v1.9.1.rc
         with:
           exclude: |
-            test1
-            test2
+            *.ignore
